@@ -417,10 +417,10 @@
                 <img class="offer_img" src="../img/offer.png" alt="">
 
             </div>
-            <div class="col-lg-5 sect_item"  style="justify-content: flex-start;">
+            <div class="col-lg-5 sect_item"  style="justify-content: flex-start;" id="buy">
                 <div class="offer_sq myBtn" style="height: 130px; width: 389px;">
 
-                    <div class="offer_sq_1" id="buy">
+                    <div class="offer_sq_1" >
                         <div id="offer_price">
                             -50%
                         </div>
@@ -607,6 +607,13 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js"></script>
 
 <script>
+        var $page = $('html, body');
+$('a[href*="#"]').click(function() {
+    $page.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top-50
+    }, 400);
+    return false;
+});
     var modal = document.getElementById('myModal');
 
     $(document).on('click', '.myBtn', function() {

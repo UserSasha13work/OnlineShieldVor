@@ -404,15 +404,15 @@
         <!-- offer -->
         <!-- left -->
         <div class="row offer" >
-            <div class="col-lg-7 sect_item">
+            <div class="col-lg-7 sect_item" >
                 
-                    <img class="offer_img" src="../img/offer.png" alt="" >
+                    <img class="offer_img" src="../img/offer.png" alt=""  >
                 
             </div>
-            <div class="col-lg-5 sect_item"  style="justify-content: flex-start;">
+            <div class="col-lg-5 sect_item"  style="justify-content: flex-start;" id="buy">
                 <div class="offer_sq myBtn"   style="cursor: pointer;">
 
-                    <div class="offer_sq_1" id="buy">
+                    <div class="offer_sq_1"  >
                         <div id="offer_price" >
                             SAVE 50%
                         </div>
@@ -435,12 +435,12 @@
                        
                     </div>
                 </div>
-                <div class="land_text">
+                <div class="land_text" >
                     <h1>Get your personal security app!
                     </h1>
                     <div class="land_list">
 
-                        <div class="land_list_item">
+                        <div class="land_list_item" id="buy">
                             <img src="../img/check.svg" alt="">
                             <div>Get your personal security program.
                             </div>
@@ -573,6 +573,13 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js"></script>
 
 <script>
+    var $page = $('html, body');
+$('a[href*="#"]').click(function() {
+    $page.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top-50
+    }, 400);
+    return false;
+});
     var modal = document.getElementById('myModal');
 
     $(document).on('click', '.myBtn', function() {
